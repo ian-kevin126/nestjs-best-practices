@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" modified="2023-08-30T00:57:47.749Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" version="21.7.0" etag="EwX1MdJ0p67ZZsv556dq" type="device">
+  <diagram id="HjufPFc5aDykOGxNhG7x" name="第 1 页">
+    <mxGraphModel dx="2272" dy="885" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NBCErC0Tfdow4e20bjyc-1" value="请求" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="130" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-2" value="POST&lt;br&gt;/auth/signin" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="NBCErC0Tfdow4e20bjyc-1">
+          <mxGeometry x="10" y="30" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-3" value="请求" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="250" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-4" value="POST&lt;br&gt;/auth/signup" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="NBCErC0Tfdow4e20bjyc-3">
+          <mxGeometry x="5" y="30" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NBCErC0Tfdow4e20bjyc-5" target="NBCErC0Tfdow4e20bjyc-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-5" value="AuthController" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-6" value="Controller" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="70" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-7" value="UserController" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NBCErC0Tfdow4e20bjyc-8" target="NBCErC0Tfdow4e20bjyc-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-8" value="AuthService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-9" value="Service" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="70" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NBCErC0Tfdow4e20bjyc-10" target="NBCErC0Tfdow4e20bjyc-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-10" value="UserService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-11" value="AuthController" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-12" value="Controller" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="680" y="70" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-13" value="UserRepository" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NBCErC0Tfdow4e20bjyc-2" target="NBCErC0Tfdow4e20bjyc-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NBCErC0Tfdow4e20bjyc-4" target="NBCErC0Tfdow4e20bjyc-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="290" />
+              <mxPoint x="290" y="167" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-19" value="登录" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="155" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NBCErC0Tfdow4e20bjyc-20" value="注册" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="280" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
