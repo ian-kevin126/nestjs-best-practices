@@ -24,8 +24,8 @@ dependencies:
     specifier: ^9.0.0
     version: 9.0.0(@nestjs/common@9.0.0)
   '@nestjs/mapped-types':
-    specifier: '*'
-    version: 0.0.1(class-transformer@0.5.1)(class-validator@0.13.2)(reflect-metadata@0.1.13)
+    specifier: ^1.0.0
+    version: 1.0.0(@nestjs/common@9.0.0)(class-transformer@0.5.1)(class-validator@0.13.2)(reflect-metadata@0.1.13)
   '@nestjs/passport':
     specifier: ^9.0.0
     version: 9.0.0(@nestjs/common@9.0.0)(passport@0.6.0)
@@ -1057,13 +1057,15 @@ packages:
       jsonwebtoken: 8.5.1
     dev: false
 
-  /@nestjs/mapped-types@0.0.1(class-transformer@0.5.1)(class-validator@0.13.2)(reflect-metadata@0.1.13):
-    resolution: {integrity: sha512-4G4Ui7Sj0UqXiZsUFk/6cPD3K7uZEFSElzkOftaJ3/lXW+HUi1/vfWXabF53qrzO1enTRQDxt1plDbP6SsqXEg==}
+  /@nestjs/mapped-types@1.0.0(@nestjs/common@9.0.0)(class-transformer@0.5.1)(class-validator@0.13.2)(reflect-metadata@0.1.13):
+    resolution: {integrity: sha512-26AW5jHadLXtvHs+M+Agd9KZ92dDlBrmD0rORlBlvn2KvsWs4JRaKl2mUsrW7YsdZeAu3Hc4ukqyYyDdyCmMWQ==}
     peerDependencies:
-      class-transformer: ^0.2.3
-      class-validator: ^0.11.1
+      '@nestjs/common': ^7.0.8 || ^8.0.0
+      class-transformer: ^0.2.0 || ^0.3.0 || ^0.4.0
+      class-validator: ^0.11.1 || ^0.12.0 || ^0.13.0
       reflect-metadata: ^0.1.12
     dependencies:
+      '@nestjs/common': 9.0.0(class-transformer@0.5.1)(class-validator@0.13.2)(reflect-metadata@0.1.13)(rxjs@7.2.0)
       class-transformer: 0.5.1
       class-validator: 0.13.2
       reflect-metadata: 0.1.13

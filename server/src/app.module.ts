@@ -1,15 +1,23 @@
+/*
+ * @Author: ian-kevin126 kevinliao125@163.com
+ * @Date: 2023-08-27 23:25:40
+ * @LastEditors: ian-kevin126 kevinliao125@163.com
+ * @LastEditTime: 2023-09-02 22:25:14
+ * @FilePath: /nestjs-best-practices/server/src/app.module.ts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import { Global, Logger, Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
 import * as dotenv from 'dotenv';
 import * as Joi from 'joi';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { connectionParams } from '../ormconfig';
 
 import { LogsModule } from './logs/logs.module';
-import { RolesModule } from './roles/roles.module';
-
-import { connectionParams } from '../ormconfig';
 import { AuthModule } from './auth/auth.module';
+import { RolesModule } from './roles/roles.module';
+import { MenusModule } from './menus/menus.module';
 
 const envFilePath = `.env.${process.env.NODE_ENV || `development`}`;
 
@@ -43,6 +51,7 @@ const envFilePath = `.env.${process.env.NODE_ENV || `development`}`;
     LogsModule,
     RolesModule,
     AuthModule,
+    MenusModule,
   ],
   controllers: [],
   providers: [Logger],

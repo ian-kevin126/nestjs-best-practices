@@ -2,18 +2,18 @@
  * @Author: ian-kevin126 kevinliao125@163.com
  * @Date: 2023-08-30 08:58:43
  * @LastEditors: ian-kevin126 kevinliao125@163.com
- * @LastEditTime: 2023-08-31 09:04:46
+ * @LastEditTime: 2023-09-02 18:27:40
  * @FilePath: /nestjs-practices/server/src/auth/auth.module.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import { Module } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
-import { UserModule } from 'src/user/user.module';
+import { UserModule } from '../user/user.module';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { ConfigEnum } from 'src/enum/config.enum';
+import { ConfigEnum } from '../enum/config.enum';
 import { JwtStrategy } from './auth.strategy';
 
 @Module({

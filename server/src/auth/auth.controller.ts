@@ -2,7 +2,7 @@
  * @Author: ian-kevin126 kevinliao125@163.com
  * @Date: 2023-08-30 08:59:19
  * @LastEditors: ian-kevin126 kevinliao125@163.com
- * @LastEditTime: 2023-09-02 00:44:54
+ * @LastEditTime: 2023-09-02 18:27:26
  * @FilePath: /nestjs-practices/server/src/auth/auth.controller.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -15,7 +15,7 @@ import {
   UseFilters,
   UseInterceptors,
 } from '@nestjs/common';
-import { TypeormFilter } from 'src/filters/typeorm.filter';
+import { TypeormFilter } from '../filters/typeorm.filter';
 import { AuthService } from './auth.service';
 import { SigninUserDto } from './dto/signin-user.dto';
 // import { SerializeInterceptor } from '../interceptors/serialize.interceptor';

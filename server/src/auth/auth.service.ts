@@ -2,7 +2,7 @@
  * @Author: ian-kevin126 kevinliao125@163.com
  * @Date: 2023-08-30 08:58:58
  * @LastEditors: ian-kevin126 kevinliao125@163.com
- * @LastEditTime: 2023-09-01 09:38:19
+ * @LastEditTime: 2023-09-02 18:27:50
  * @FilePath: /nestjs-practices/server/src/auth/auth.service.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -12,8 +12,8 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { getUserDto } from 'src/user/dto/get-user.dto';
-import { UserService } from 'src/user/user.service';
+import { getUserDto } from '../user/dto/get-user.dto';
+import { UserService } from '../user/user.service';
 import * as argon2 from 'argon2';
 
 @Injectable()

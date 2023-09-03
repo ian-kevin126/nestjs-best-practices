@@ -1,10 +1,18 @@
+<!--
+ * @Author: ian-kevin126 kevinliao125@163.com
+ * @Date: 2023-08-06 23:46:02
+ * @LastEditors: ian-kevin126 kevinliao125@163.com
+ * @LastEditTime: 2023-09-02 17:11:01
+ * @FilePath: /nestjs-best-practices/fe_vue/src/components/modal/EditAddModal.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
   <!-- Edit/Add Model -->
   <div class="modal fade" ref="editRef" tabindex="-1" aria-labelledby="EditAndAddModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="EditAndAddModalLabel">{{msg}}</h5>
+          <h5 class="modal-title" id="EditAndAddModalLabel">{{ msg }}</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -79,5 +87,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

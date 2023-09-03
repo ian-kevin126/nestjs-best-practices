@@ -21,11 +21,11 @@ import { ConfigService } from '@nestjs/config';
 import { User } from './user.entity';
 import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 import { getUserDto } from './dto/get-user.dto';
-import { TypeormFilter } from 'src/filters/typeorm.filter';
+import { TypeormFilter } from '../filters/typeorm.filter';
 import { CreateUserPipe } from './pipes/create-user.pipe';
 import { CreateUserDto } from './dto/create-user.dto';
 import { AdminGuard } from '../guards/admin.guard';
-import { JwtGuard } from 'src/guards/jwt.guard';
+import { JwtGuard } from '../guards/jwt.guard';
 
 @Controller('user')
 @UseFilters(new TypeormFilter())
