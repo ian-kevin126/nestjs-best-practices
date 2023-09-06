@@ -2,7 +2,7 @@
  * @Author: ian-kevin126 kevinliao125@163.com
  * @Date: 2023-08-27 23:25:40
  * @LastEditors: ian-kevin126 kevinliao125@163.com
- * @LastEditTime: 2023-09-01 23:22:51
+ * @LastEditTime: 2023-09-05 09:22:58
  * @FilePath: /nestjs-practices/server/src/main.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -12,31 +12,57 @@ import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 import { AppModule } from './app.module';
 import { AllExceptionFilter } from './filters/all-exception.filter';
+import { getServerConfig } from '../ormconfig';
+import { setupApp } from './setup';
+
+// async function bootstrap() {
+//   const app = await NestFactory.create(AppModule, {
+//     // 关闭整个nestjs日志
+//     // logger: false,
+//     // logger: ['error', 'warn'],
+//   });
+//   app.useLogger(app.get(WINSTON_MODULE_NEST_PROVIDER));
+//   app.setGlobalPrefix('api/v1');
+
+//   // 全局 filter 只能有一个
+//   // const httpAdapter = app.get(HttpAdapterHost);
+//   // 这里就直接从 @nestjs/common 中去拿logger，因为只上面已经用WINSTON的logger替换了全局的logger
+//   // const logger = new Logger();
+//   // app.useGlobalFilters(new AllExceptionFilter(logger, httpAdapter));
+
+//   // 全局拦截器
+//   app.useGlobalPipes(
+//     new ValidationPipe({
+//       // 去除在类上不存在的字段
+//       whitelist: true,
+//     }),
+//   );
+
+//   const port = 3000;
+//   await app.listen(port);
+// }
+// bootstrap();
 
 async function bootstrap() {
+  const config = getServerConfig();
+
   const app = await NestFactory.create(AppModule, {
     // 关闭整个nestjs日志
+    // logger: flag && [],
     // logger: false,
+    // 允许跨域
+    cors: true,
     // logger: ['error', 'warn'],
   });
-  app.useLogger(app.get(WINSTON_MODULE_NEST_PROVIDER));
-  app.setGlobalPrefix('api/v1');
 
-  // 全局 filter 只能有一个
-  // const httpAdapter = app.get(HttpAdapterHost);
-  // 这里就直接从 @nestjs/common 中去拿logger，因为只上面已经用WINSTON的logger替换了全局的logger
-  // const logger = new Logger();
-  // app.useGlobalFilters(new AllExceptionFilter(logger, httpAdapter));
+  setupApp(app);
 
-  // 全局拦截器
-  app.useGlobalPipes(
-    new ValidationPipe({
-      // 去除在类上不存在的字段
-      whitelist: true,
-    }),
-  );
+  const port =
+    typeof config['APP_PORT'] === 'string'
+      ? parseInt(config['APP_PORT'])
+      : 3000;
 
-  const port = 3000;
   await app.listen(port);
+  await app.init();
 }
 bootstrap();
